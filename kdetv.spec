@@ -41,8 +41,10 @@ PC.
 %patch0 -p1
 
 %build
-%{__make} -f admin/Makefile.common cvs
-install %{_datadir}/automake/config.* admin
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
