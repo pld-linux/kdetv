@@ -1,14 +1,12 @@
 Summary:	KDE Video4Linux Stream Capture Viewer
 Summary(pl):	Przegl±darka strumienia Video4Linux dla KDE
 Name:		kdetv
-Version:	0.8.0
-Release:	3
+Version:	0.8.3
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dziegel.free.fr/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	750c5e6b01b5509f2f60358270ffe318
-Patch0:		%{name}-userbuild.patch
-Patch1:		%{name}-desktop.patch
+# Source0-md5:	3fe6b0d6e65a51a0b408d4c0dbb7c896
 URL:		http://www.kdetv.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	alsa-lib-devel
@@ -38,8 +36,6 @@ PC.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %{__perl} -pi -e 's@(ac_zvbi_libraries="\$withval"/)lib@$1%{_lib}@' configure
 %{__perl} -pi -e 's@(ac_alsa_libraries="\$withval"/)lib@$1%{_lib}@' configure
