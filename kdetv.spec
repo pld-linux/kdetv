@@ -2,7 +2,7 @@ Summary:	KDE Video4Linux Stream Capture Viewer
 Summary(pl):	Przegl±darka strumienia Video4Linux dla KDE
 Name:		kdetv
 Version:	0.8.5
-Release:	0.2
+Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dziegel.free.fr/releases/%{name}-%{version}.tar.bz2
