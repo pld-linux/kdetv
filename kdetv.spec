@@ -2,7 +2,7 @@ Summary:	KDE Video4Linux Stream Capture Viewer
 Summary(pl):	Przegl±darka strumienia Video4Linux dla KDE
 Name:		kdetv
 Version:	0.8.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dziegel.free.fr/releases/%{name}-%{version}.tar.bz2
@@ -39,10 +39,15 @@ PC.
 %setup -q
 %patch0 -p1
 
+%{__perl} -pi -e 's@(ac_zvbi_libraries="\$withval"/)lib@$1%{_lib}@' configure
+%{__perl} -pi -e 's@(ac_alsa_libraries="\$withval"/)lib@$1%{_lib}@' configure
+
 %build
 cp -f /usr/share/automake/config.* admin
 %configure \
-	--with-qt-libraries=%{_libdir}
+	--with-alsa-dir=/usr \
+	--with-qt-libraries=%{_libdir} \
+	--with-zvbi-dir=/usr
 %{__make}
 
 %install
@@ -51,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	kde_appsdir=%{_desktopdir} \
 	DESTDIR=$RPM_BUILD_ROOT
+
+mv -f $RPM_BUILD_ROOT%{_desktopdir}/Multimedia/*.desktop \
+	$RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
