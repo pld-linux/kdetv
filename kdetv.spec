@@ -41,6 +41,7 @@ PC.
 %patch0 -p1
 
 %build
+%{__make} -f admin/Makefile.common cvs
 %configure
 %{__make}
 
