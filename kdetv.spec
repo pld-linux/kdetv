@@ -37,7 +37,7 @@ PC.
 
 %prep
 %setup -q
-%patch0	-p1
+%patch0 -p1
 
 %{__perl} -pi -e 's@(ac_zvbi_libraries="\$withval"/)lib@$1%{_lib}@' configure
 %{__perl} -pi -e 's@(ac_alsa_libraries="\$withval"/)lib@$1%{_lib}@' configure
@@ -69,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO VERSION ChangeLog AUTHORS
-%attr(0755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde3/*.so*
 %{_libdir}/kde3/*.la
