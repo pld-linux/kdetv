@@ -1,6 +1,6 @@
 diff -urN kdetv-0.8.0.org/kdetv/kvideoio/kv4lsetup/Makefile.am kdetv-0.8.0/kdetv/kvideoio/kv4lsetup/Makefile.am
 --- kdetv-0.8.0.org/kdetv/kvideoio/kv4lsetup/Makefile.am	2004-04-26 00:42:16.746908568 +0200
-+++ kdetv-0.8.0/kdetv/kvideoio/kv4lsetup/Makefile.am	2004-04-26 00:42:46.251423200 +0200
++++ kdetv-0.8.0/kdetv/kvideoio/kv4lsetup/Makefile.am	2004-04-26 12:28:17.324121984 +0200
 @@ -15,9 +15,5 @@
  # that depend on the following ones.
  kv4lsetup_LDADD  = $(LIB_QT) $(KDETV_LIBS)
@@ -9,5 +9,16 @@ diff -urN kdetv-0.8.0.org/kdetv/kvideoio/kv4lsetup/Makefile.am kdetv-0.8.0/kdetv
 -install-exec-hook: 
 -	@(chown root $(DESTDIR)$(bindir)/kv4lsetup && chmod 4755  $(DESTDIR)$(bindir)/kv4lsetup) 
 -
+ clean-local:
+ 		-rm *~
+diff -urN kdetv-0.8.0.org/kdetv/kvideoio/kv4lsetup/Makefile.in kdetv-0.8.0/kdetv/kvideoio/kv4lsetup/Makefile.in
+--- kdetv-0.8.0.org/kdetv/kvideoio/kv4lsetup/Makefile.in	2004-04-26 00:42:16.746908568 +0200
++++ kdetv-0.8.0/kdetv/kvideoio/kv4lsetup/Makefile.in	2004-04-26 12:28:27.138629952 +0200
+@@ -613,7 +613,6 @@
+ 
+ 
+ install-exec-hook: 
+-	@(chown root $(DESTDIR)$(bindir)/kv4lsetup && chmod 4755  $(DESTDIR)$(bindir)/kv4lsetup) 
+ 
  clean-local:
  		-rm *~
