@@ -41,10 +41,7 @@ PC.
 %patch0 -p1
 
 %build
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
+install %{_datadir}/automake/config.* admin
 %configure
 %{__make}
 
