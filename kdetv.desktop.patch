@@ -1,0 +1,8 @@
+--- kdetv-0.8.5/kdetv/clients/kdetv/kdetv.desktop.old	2005-03-17 17:42:11.065870960 +0100
++++ kdetv-0.8.5/kdetv/clients/kdetv/kdetv.desktop	2005-03-17 17:43:14.165278392 +0100
+@@ -25,4 +25,4 @@
+ GenericName[xx]=xxTV Viewerxx
+ MimeType=text/x-tv-channels;
+ Terminal=false
+-Categories=QT;KDE;Multimedia;AudioVideo;Video;TV;
++Categories=QT;KDE;Video;TV;
