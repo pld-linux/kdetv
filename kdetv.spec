@@ -41,8 +41,8 @@ PC.
 %patch0 -p1
 
 %build
-install %{_datadir}/automake/config.* admin
 %{__make} -f admin/Makefile.common cvs
+install %{_datadir}/automake/config.* admin
 %configure
 %{__make}
 
