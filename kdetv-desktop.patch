@@ -1,0 +1,15 @@
+--- kdetv-0.8.0/kdetv/clients/kdetv/kdetv.desktop~	Wed Jul 28 00:21:38 2004
++++ kdetv-0.8.0/kdetv/clients/kdetv/kdetv.desktop	Wed Jul 28 00:23:00 2004
+@@ -7,6 +7,11 @@
+ Name=kdetv
+ GenericName=TV Viewer
+ GenericName[et]=TV
++GenericName[pl]=Oglądanie TV
++Comment=TV Viewer
++Comment[et]=TV
++Comment[pl]=
+ MimeType=text/x-tv-channels;
+-Terminal=0
++Terminal=false
+ Categories=QT;KDE;Multimedia;AudioVideo;Video;TV;
++# vi: encoding=utf-8
