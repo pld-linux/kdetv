@@ -23,7 +23,6 @@ BuildRequires:	OpenGL-devel
 BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	zlib-devel
 BuildRequires:	zvbi-devel
-Provides:	kdetv = %{version}-%{release}
 Obsoletes:	kwintv
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
