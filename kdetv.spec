@@ -41,7 +41,8 @@ PC.
 
 %build
 cp -f /usr/share/automake/config.* admin
-%configure
+%configure \
+	--with-qt-libraries=%{_libdir}
 %{__make}
 
 %install
