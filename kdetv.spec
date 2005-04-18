@@ -31,8 +31,7 @@ kdetv allows you to watch TV in a window on your PC screen.
 
 %description -l pl
 kdetv jest aplikacj± KDE bazuj±c± na sterowniku bttv autorstwa Ralpha
-Metzlera. kdetv pozwala na ogl±danie TV w oknie na ekranie twojego
-PC.
+Metzlera. kdetv pozwala na ogl±danie TV w oknie na ekranie twojego PC.
 
 %prep
 %setup -q
@@ -69,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README TODO VERSION ChangeLog AUTHORS
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde3/*.so*
