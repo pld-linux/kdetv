@@ -5,4 +5,4 @@
  MimeType=text/x-tv-channels;
  Terminal=false
 -Categories=QT;KDE;Multimedia;AudioVideo;Video;TV;
-+Categories=QT;KDE;Video;TV;
++Categories=Qt;KDE;Video;TV;
