@@ -58,12 +58,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	kde_appsdir=%{_desktopdir} \
+	kde_htmldir=%{_kdedocdir} \
 	DESTDIR=$RPM_BUILD_ROOT
 
 mv -f $RPM_BUILD_ROOT%{_desktopdir}/Multimedia/*.desktop \
 	$RPM_BUILD_ROOT%{_desktopdir}
 
-%find_lang %{name}
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
