@@ -2,12 +2,12 @@ Summary:	KDE Video4Linux Stream Capture Viewer
 Summary(de):	Video4Linux Stream Player für KDE
 Summary(pl):	Przegl±darka strumienia Video4Linux dla KDE
 Name:		kdetv
-Version:	0.8.9
-Release:	0.1
+Version:	0.8.8
+Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dziegel.free.fr/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	7a5d73e08bc133cc2db228cb6655670e
+# Source0-md5:	587885b528b3b737d3bce07526b7f8e8
 Patch0:		%{name}.desktop.patch
 URL:		http://www.kdetv.org/
 BuildRequires:	OpenGL-devel
@@ -58,13 +58,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	kde_appsdir=%{_desktopdir} \
-	kde_htmldir=%{_kdedocdir} \
 	DESTDIR=$RPM_BUILD_ROOT
 
 mv -f $RPM_BUILD_ROOT%{_desktopdir}/Multimedia/*.desktop \
 	$RPM_BUILD_ROOT%{_desktopdir}
 
-%find_lang %{name} --with-kde
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
