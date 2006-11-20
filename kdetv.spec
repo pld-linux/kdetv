@@ -1,9 +1,13 @@
+#
+# Conditional build:
+%bcond_without	lirc		# without lirc support
+#
 Summary:	KDE Video4Linux Stream Capture Viewer
 Summary(de):	Video4Linux Stream Player für KDE
 Summary(pl):	Przegl±darka strumienia Video4Linux dla KDE
 Name:		kdetv
 Version:	0.8.9
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dziegel.free.fr/releases/%{name}-%{version}.tar.bz2
@@ -20,7 +24,7 @@ BuildRequires:	kdelibs-devel >= 9:3.3.2
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtool
-BuildRequires:	lirc-devel
+%{?with_lirc:BuildRequires:	lirc-devel}
 BuildRequires:	zlib-devel
 BuildRequires:	zvbi-devel
 Obsoletes:	kwintv
@@ -48,6 +52,7 @@ cp -f /usr/share/automake/config.* admin
 %if "%{_lib}" == "lib64"
 	--enable-libsuffix=64 \
 %endif
+	--%{?with_lirc:en}%{!?with_lirc:dis}able-lirc \
 	--with-alsa-dir=%{_prefix} \
 	--with-qt-libraries=%{_libdir} \
 	--with-zvbi-dir=%{_prefix}
