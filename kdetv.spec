@@ -52,7 +52,7 @@ cp -f /usr/share/automake/config.* admin
 %if "%{_lib}" == "lib64"
 	--enable-libsuffix=64 \
 %endif
-	--%{?with_lirc:en}%{!?with_lirc:dis}able-lirc \
+	--%{?with_lirc:en}%{!?with_lirc:dis}able-kdetv-lirc \
 	--with-alsa-dir=%{_prefix} \
 	--with-qt-libraries=%{_libdir} \
 	--with-zvbi-dir=%{_prefix}
