@@ -3,8 +3,8 @@
 %bcond_without	lirc		# without lirc support
 #
 Summary:	KDE Video4Linux Stream Capture Viewer
-Summary(de):	Video4Linux Stream Player für KDE
-Summary(pl):	Przegl±darka strumienia Video4Linux dla KDE
+Summary(de.UTF-8):   Video4Linux Stream Player fÃ¼r KDE
+Summary(pl.UTF-8):   PrzeglÄ…darka strumienia Video4Linux dla KDE
 Name:		kdetv
 Version:	0.8.9
 Release:	1
@@ -34,13 +34,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 kdetv is a KDE application based on the bttv-driver by Ralph Metzler.
 kdetv allows you to watch TV in a window on your PC screen.
 
-%description -l de
+%description -l de.UTF-8
 Kdetv ist eine KDE Applikation die auf den bttv Treiber von Ralph
-Metzler bassiert. Kdetv ermöglicht es TV auf ihren PC zu gucken.
+Metzler bassiert. Kdetv ermÃ¶glicht es TV auf ihren PC zu gucken.
 
-%description -l pl
-kdetv jest aplikacj± KDE bazuj±c± na sterowniku bttv autorstwa Ralpha
-Metzlera. kdetv pozwala na ogl±danie TV w oknie na ekranie PC.
+%description -l pl.UTF-8
+kdetv jest aplikacjÄ… KDE bazujÄ…cÄ… na sterowniku bttv autorstwa Ralpha
+Metzlera. kdetv pozwala na oglÄ…danie TV w oknie na ekranie PC.
 
 %prep
 %setup -q
