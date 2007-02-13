@@ -3,8 +3,8 @@
 %bcond_without	lirc		# without lirc support
 #
 Summary:	KDE Video4Linux Stream Capture Viewer
-Summary(de.UTF-8):   Video4Linux Stream Player für KDE
-Summary(pl.UTF-8):   Przeglądarka strumienia Video4Linux dla KDE
+Summary(de.UTF-8):	Video4Linux Stream Player für KDE
+Summary(pl.UTF-8):	Przeglądarka strumienia Video4Linux dla KDE
 Name:		kdetv
 Version:	0.8.9
 Release:	1
