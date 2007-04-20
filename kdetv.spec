@@ -25,6 +25,7 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtool
 %{?with_lirc:BuildRequires:	lirc-devel}
+BuildRequires:	xorg-lib-libXxf86dga-devel
 BuildRequires:	zlib-devel
 BuildRequires:	zvbi-devel
 Obsoletes:	kwintv
