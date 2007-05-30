@@ -7,12 +7,15 @@ Summary(de.UTF-8):	Video4Linux Stream Player für KDE
 Summary(pl.UTF-8):	Przeglądarka strumienia Video4Linux dla KDE
 Name:		kdetv
 Version:	0.8.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dziegel.free.fr/releases/%{name}-%{version}.tar.bz2
 # Source0-md5:	7a5d73e08bc133cc2db228cb6655670e
 Patch0:		%{name}.desktop.patch
+Patch1:		kde-ac260.patch
+Patch2:		kde-ac260-lt.patch
+Patch3:		kde-am.patch
 URL:		http://www.kdetv.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	alsa-lib-devel
@@ -46,9 +49,13 @@ Metzlera. kdetv pozwala na oglądanie TV w oknie na ekranie PC.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 cp -f /usr/share/automake/config.* admin
+%{__make} -f admin/Makefile.common cvs
 %configure \
 %if "%{_lib}" == "lib64"
 	--enable-libsuffix=64 \
