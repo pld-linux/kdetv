@@ -22,7 +22,7 @@ BuildRequires:	alsa-lib-devel
 BuildRequires:	arts-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	kdelibs-devel >= 9:3.3.2
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
